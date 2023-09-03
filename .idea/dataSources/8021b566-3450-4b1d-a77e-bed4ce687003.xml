@@ -1326,8 +1326,8 @@
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="512" parent="1" name="university">
-      <IntrospectionTimestamp>2023-08-29.05:35:02</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-08-28.11:35:02</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-09-03.01:34:46</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-02.07:34:47</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="513" parent="1" name="Example">
@@ -1355,270 +1355,273 @@
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="521" parent="1" name="homework">
-      <IntrospectionTimestamp>2023-09-01.01:09:15</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-08-31.07:09:15</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-09-03.01:34:45</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-02.07:34:46</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
-    <user id="522" parent="1" name="mariadb.sys">
-      <Host>localhost</Host>
-    </user>
-    <user id="523" parent="1" name="root">
+    <schema id="522" parent="1" name="LHHBoardWeb">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <user id="523" parent="1" name="mariadb.sys">
       <Host>localhost</Host>
     </user>
     <user id="524" parent="1" name="root">
-      <Host>mariadb\_test</Host>
-    </user>
-    <user id="525" parent="1" name="root"/>
-    <user id="526" parent="1" name="healthcheck">
-      <Host>127.0.0.1</Host>
-    </user>
-    <user id="527" parent="1" name="healthcheck">
-      <Host>::1</Host>
-    </user>
-    <user id="528" parent="1" name="healthcheck">
       <Host>localhost</Host>
     </user>
-    <table id="529" parent="512" name="Course">
+    <user id="525" parent="1" name="root">
+      <Host>mariadb\_test</Host>
+    </user>
+    <user id="526" parent="1" name="root"/>
+    <user id="527" parent="1" name="healthcheck">
+      <Host>127.0.0.1</Host>
+    </user>
+    <user id="528" parent="1" name="healthcheck">
+      <Host>::1</Host>
+    </user>
+    <user id="529" parent="1" name="healthcheck">
+      <Host>localhost</Host>
+    </user>
+    <table id="530" parent="512" name="Course">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="530" parent="512" name="Major">
+    <table id="531" parent="512" name="Major">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="531" parent="512" name="Professor">
+    <table id="532" parent="512" name="Professor">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="532" parent="512" name="Student">
+    <table id="533" parent="512" name="Student">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="533" parent="512" name="Subject">
+    <table id="534" parent="512" name="Subject">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="534" parent="512" name="Users">
+    <table id="535" parent="512" name="Users">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="535" parent="521" name="WRITER">
+    <table id="536" parent="521" name="WRITER">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <column id="536" parent="529" name="courseId">
+    <column id="537" parent="530" name="courseId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="537" parent="529" name="studentId">
+    <column id="538" parent="530" name="studentId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="538" parent="529" name="subjectId">
+    <column id="539" parent="530" name="subjectId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="539" parent="529" name="sore">
+    <column id="540" parent="530" name="sore">
       <DasType>varchar(10)|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="540" parent="529" name="PRIMARY">
+    <index id="541" parent="530" name="PRIMARY">
       <ColNames>courseId</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="541" parent="529" name="PRIMARY">
+    <key id="542" parent="530" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="542" parent="530" name="majorId">
+    <column id="543" parent="531" name="majorId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="543" parent="530" name="major">
+    <column id="544" parent="531" name="major">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="544" parent="530" name="PRIMARY">
+    <index id="545" parent="531" name="PRIMARY">
       <ColNames>majorId</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="545" parent="530" name="PRIMARY">
+    <key id="546" parent="531" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="546" parent="531" name="professorId">
+    <column id="547" parent="532" name="professorId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="547" parent="531" name="userId">
+    <column id="548" parent="532" name="userId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="548" parent="531" name="PRIMARY">
+    <index id="549" parent="532" name="PRIMARY">
       <ColNames>professorId</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="549" parent="531" name="PRIMARY">
+    <key id="550" parent="532" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="550" parent="532" name="studentId">
+    <column id="551" parent="533" name="studentId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="551" parent="532" name="userId">
+    <column id="552" parent="533" name="userId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="552" parent="532" name="professorId">
+    <column id="553" parent="533" name="professorId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="553" parent="532" name="credit">
+    <column id="554" parent="533" name="credit">
       <DasType>tinyint(4)|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="554" parent="532" name="PRIMARY">
+    <index id="555" parent="533" name="PRIMARY">
       <ColNames>studentId</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="555" parent="532" name="PRIMARY">
+    <key id="556" parent="533" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="556" parent="533" name="subjectId">
+    <column id="557" parent="534" name="subjectId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="557" parent="533" name="subjectName">
+    <column id="558" parent="534" name="subjectName">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="558" parent="533" name="subjectInfo">
+    <column id="559" parent="534" name="subjectInfo">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="559" parent="533" name="majorId">
+    <column id="560" parent="534" name="majorId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="560" parent="533" name="professorId">
+    <column id="561" parent="534" name="professorId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="561" parent="533" name="dayof">
+    <column id="562" parent="534" name="dayof">
       <DasType>varchar(20)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="562" parent="533" name="period">
+    <column id="563" parent="534" name="period">
       <DasType>tinyint(4)|0s</DasType>
       <Position>7</Position>
     </column>
-    <index id="563" parent="533" name="PRIMARY">
+    <index id="564" parent="534" name="PRIMARY">
       <ColNames>subjectId</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="564" parent="533" name="PRIMARY">
+    <key id="565" parent="534" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="565" parent="534" name="userId">
+    <column id="566" parent="535" name="userId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="566" parent="534" name="password">
+    <column id="567" parent="535" name="password">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="567" parent="534" name="name">
+    <column id="568" parent="535" name="name">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="568" parent="534" name="birth">
+    <column id="569" parent="535" name="birth">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="569" parent="534" name="address">
+    <column id="570" parent="535" name="address">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="570" parent="534" name="majorId">
+    <column id="571" parent="535" name="majorId">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="571" parent="534" name="role">
+    <column id="572" parent="535" name="role">
       <DasType>varchar(100)|0s</DasType>
       <DefaultExpression>&apos;학생&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="572" parent="534" name="status">
+    <column id="573" parent="535" name="status">
       <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;재학&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <index id="573" parent="534" name="PRIMARY">
+    <index id="574" parent="535" name="PRIMARY">
       <ColNames>userId</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="574" parent="534" name="PRIMARY">
+    <key id="575" parent="535" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="575" parent="535" name="writerIndex">
+    <column id="576" parent="536" name="writerIndex">
       <AutoIncrement>1</AutoIncrement>
       <DasType>bigint(20) unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="576" parent="535" name="wirter">
+    <column id="577" parent="536" name="wirter">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="577" parent="535" name="content">
+    <column id="578" parent="536" name="content">
       <DasType>varchar(200)|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="578" parent="535" name="PRIMARY">
+    <index id="579" parent="536" name="PRIMARY">
       <ColNames>writerIndex</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="579" parent="535" name="PRIMARY">
+    <key id="580" parent="536" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

@@ -11,17 +11,20 @@ import java.sql.ResultSet;
 
 public class UsersDAO {
     private Connection conn = null;
+
     private PreparedStatement psmt = null;
     private ResultSet rs = null;
-    private String USER_SELECT ="SELECT * FROM Users WHERE userId = 1";
+    private String USER_SELECT ="SELECT * FROM Users WHERE userId = ?";
 
     private String USER_INSERT ="INSERT INTO Users" +
             "(userId, password, name, birth, address, majorId, role, status) " +
             "VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
-    public void SELECT_USER(User dto){
+    public User SELECT_USER(long userId){
+        User dto = new User();
         try{
             conn = DBConnection.getConnection();
             psmt = conn.prepareStatement(USER_SELECT);
+            psmt.setLong(1, userId);
             rs = psmt.executeQuery();
             while (rs.next()){
                 dto.setUserId(rs.getLong("userId"));
@@ -32,7 +35,6 @@ public class UsersDAO {
                 dto.setMajorId(rs.getLong("majorId"));
                 dto.setRole(rs.getString("role"));
                 dto.setStatus(rs.getString("status"));
-                System.out.println(dto);
             }
 
         } catch (NullPointerException e2){
@@ -44,6 +46,7 @@ public class UsersDAO {
         } finally {
             DBClose.close(rs, psmt, conn);
         }
+        return dto;
     }
 
     public void INSERT_USER(User dto){
